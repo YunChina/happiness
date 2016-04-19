@@ -1,0 +1,42 @@
+//
+//  CYPrefixHeader.pch
+//  SmallLoving
+//
+//  Created by Cheney on 16/3/19.
+//  Copyright © 2016年 Cheney. All rights reserved.
+//
+
+
+/**
+ *  自定义调试打印
+ */
+#ifdef DEBUG
+#define CYLog(FORMAT, ...) do {fprintf(stderr,"%s [line %d] %s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);} while(0)
+#else
+#define NSLog(...)
+#endif
+#define kScreenH [UIScreen mainScreen].bounds.size.height
+#define kScreenW [UIScreen mainScreen].bounds.size.width
+
+
+/**
+ *  自定义 RGB 值
+ */
+#define SHColorCreater(r, g, b, a) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:a]
+#define SHNotificationCenter [NSNotificationCenter defaultCenter]
+
+#import "UIImage+CYImage.h"
+
+#import "UIView+CYFrame.h"
+
+#import "UIView+Frame.h"
+
+#import "NSObject+CYNetWork.h"
+
+#import <Masonry.h>
+
+#import "SHLeftBackButton.h"
+
+#import "CYAlertController.h"
+
+#define SHNotificationCenter [NSNotificationCenter defaultCenter]

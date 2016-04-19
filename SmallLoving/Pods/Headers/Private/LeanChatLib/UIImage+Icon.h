@@ -1,0 +1,1 @@
+../../../LeanChatLib/LeanChatLib/Classes/vendor/UIImageCategories/UIImage+Icon.h

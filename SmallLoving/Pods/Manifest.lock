@@ -1,0 +1,87 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AVOSCloud (3.2.7)
+  - AVOSCloudIM (3.2.7):
+    - AVOSCloud
+  - DACircularProgress (2.3.1)
+  - DateTools (1.5.0)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - JSBadgeView (1.4.1)
+  - LeanChatLib (0.3.5):
+    - AVOSCloud
+    - AVOSCloudIM
+    - DateTools (= 1.5.0)
+    - FMDB (= 2.5)
+    - JSBadgeView (= 1.4.1)
+    - SDWebImage
+  - LeanCloudFeedback (0.1.1):
+    - AVOSCloud
+  - LeanCloudSocial (0.0.8):
+    - AFNetworking (~> 2.0)
+    - AVOSCloud (~> 3.1)
+  - Masonry (0.6.4)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.10)
+  - MJRefresh (3.1.0)
+  - NSObject-NSCoding (1.0)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+
+DEPENDENCIES:
+  - AVOSCloud
+  - AVOSCloudIM
+  - DACircularProgress (~> 2.3.1)
+  - LeanChatLib
+  - LeanCloudFeedback
+  - LeanCloudSocial
+  - Masonry (~> 0.6.4)
+  - MBProgressHUD (~> 0.9.2)
+  - MJExtension (~> 3.0.10)
+  - MJRefresh (~> 3.1.0)
+  - NSObject-NSCoding (~> 1.0)
+  - SDWebImage (~> 3.7.5)
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AVOSCloud: 957d1508104d7c8ed501df9d9b734d7a98c2e047
+  AVOSCloudIM: ec08eaec4d27d732e3be93eadeb3bcf1355b5dcf
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  DateTools: b93a2c2017747329c6077c7d7e8a75106e23d0d7
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
+  LeanChatLib: 9a5ed59b2b7224a0f0ea9dbb94c83e2fde0fe5d1
+  LeanCloudFeedback: 686305ea196931c7eae49800c384e42d78408482
+  LeanCloudSocial: f7787dfc1559dc47263bbfd37a03c870352ad98a
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  NSObject-NSCoding: d05f937cc1ea1560294be261ee41d5438ddc7b1b
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+
+COCOAPODS: 0.39.0

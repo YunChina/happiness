@@ -1,0 +1,1 @@
+../../../LeanChatLib/LeanChatLib/Classes/vendor/MessageDisplayKit/Classes/Vendor/XHPathCover/XHWaterDropRefresh.h

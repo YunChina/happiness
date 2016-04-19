@@ -1,0 +1,1 @@
+../../../LeanChatLib/LeanChatLib/Classes/data/AVIMEmotionMessage.h

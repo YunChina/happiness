@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titleText</key>
+		<string>白雪公主</string>
+		<key>picture</key>
+		<string>cutfruit</string>
+		<key>text</key>
+		<string>小矮人和白雪公主,七个小矮人保护小公主,恶毒的皇后嫉妒公主的美貌,竟然想用有毒的苹果毒死公主.</string>
+		<key>icon</key>
+		<string>alltime.png</string>
+		<key>name</key>
+		<string>西门飘雪</string>
+		<key>vip</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>titleText</key>
+		<string>论工作的重要性</string>
+		<key>picture</key>
+		<string>hero</string>
+		<key>text</key>
+		<string>一个男人,若果没有一份合适的工作,他将无法生活,被别人看不起,更别说找女朋友了,连家人他都养不起,所以男人要想生活,他就必须有一份体面的工作,nv&apos;li&apos;zheng&apos;qian</string>
+		<key>icon</key>
+		<string>food</string>
+		<key>name</key>
+		<string>隐身在等谁</string>
+		<key>vip</key>
+		<string>0</string>
+	</dict>
+</array>
+</plist>

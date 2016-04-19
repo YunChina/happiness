@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="KGk-i7-Jjw" customClass="SHAddMemorialTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="418" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="418" height="124.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="extension-anniversary-title-icon" translatesAutoresizingMaskIntoConstraints="NO" id="eWr-mb-WLj">
+                        <rect key="frame" x="18" y="51" width="22" height="22"/>
+                    </imageView>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入纪念日的内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIi-O4-6dH">
+                        <rect key="frame" x="55" y="54.5" width="353" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我们哪一天在一起的?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Si-db-4mB">
+                        <rect key="frame" x="55" y="52" width="161.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qIi-O4-6dH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5Xc-jo-DG7"/>
+                    <constraint firstItem="0Si-db-4mB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="B5A-NN-IlO"/>
+                    <constraint firstItem="0Si-db-4mB" firstAttribute="leading" secondItem="eWr-mb-WLj" secondAttribute="trailing" constant="15" id="BL5-mz-zJA"/>
+                    <constraint firstItem="eWr-mb-WLj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="DgT-L8-lPZ"/>
+                    <constraint firstItem="qIi-O4-6dH" firstAttribute="leading" secondItem="eWr-mb-WLj" secondAttribute="trailing" constant="15" id="MGE-HI-xaE"/>
+                    <constraint firstItem="eWr-mb-WLj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NXJ-kx-TWa"/>
+                    <constraint firstAttribute="trailing" secondItem="qIi-O4-6dH" secondAttribute="trailing" constant="10" id="ghJ-Vv-W5V"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="0Si-db-4mB" id="4e0-l8-cl1"/>
+                <outlet property="nameTextField" destination="qIi-O4-6dH" id="cKc-0H-sbR"/>
+            </connections>
+            <point key="canvasLocation" x="265" y="272.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="extension-anniversary-title-icon" width="22" height="22"/>
+    </resources>
+</document>
