@@ -93,6 +93,8 @@
 		04FD144B1CA2536600CDB91E /* CYLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD144A1CA2536600CDB91E /* CYLoginView.m */; };
 		04FD144E1CA2537000CDB91E /* CYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD144D1CA2537000CDB91E /* CYLoginViewController.m */; };
 		5EF2222325FF10ED72D0B0C8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCC9C4650623CBE5F094538 /* libPods.a */; };
+		BF85A70D1CCDF5B100A2CCAD /* jpush-ios-2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF85A70B1CCDF5B100A2CCAD /* jpush-ios-2.1.0.a */; };
+		BF85A70F1CCDF5CE00A2CCAD /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF85A70E1CCDF5CE00A2CCAD /* PushConfig.plist */; };
 		C246546A1CA55D4C00C0792A /* menses-in.gif in Resources */ = {isa = PBXBuildFile; fileRef = C24654691CA55D4C00C0792A /* menses-in.gif */; };
 		C24F978D1CAE790300479FED /* image0.png in Resources */ = {isa = PBXBuildFile; fileRef = C24F978C1CAE790300479FED /* image0.png */; };
 		C26583CD1CA66FB200B76914 /* SHPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26583CC1CA66FB200B76914 /* SHPhotoCollectionViewCell.m */; };
@@ -340,6 +342,9 @@
 		5CCC9C4650623CBE5F094538 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67003CC35080F3DC1F4D4F7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A5B5789F5B08A2ED94ED2258 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BF85A70B1CCDF5B100A2CCAD /* jpush-ios-2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.0.a"; sourceTree = "<group>"; };
+		BF85A70C1CCDF5B100A2CCAD /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		BF85A70E1CCDF5CE00A2CCAD /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PushConfig.plist; path = ../../../../PushConfig.plist; sourceTree = "<group>"; };
 		C24654691CA55D4C00C0792A /* menses-in.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "menses-in.gif"; sourceTree = "<group>"; };
 		C24F978C1CAE790300479FED /* image0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image0.png; sourceTree = "<group>"; };
 		C26583CB1CA66FB200B76914 /* SHPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPhotoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -463,6 +468,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF85A70D1CCDF5B100A2CCAD /* jpush-ios-2.1.0.a in Frameworks */,
 				5EF2222325FF10ED72D0B0C8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +504,7 @@
 		041124241C9D3FD7001B7DD2 = {
 			isa = PBXGroup;
 			children = (
+				BF85A70A1CCDF5B100A2CCAD /* lib */,
 				0411242F1C9D3FD7001B7DD2 /* SmallLoving */,
 				041124491C9D3FD8001B7DD2 /* SmallLovingTests */,
 				041124541C9D3FD8001B7DD2 /* SmallLovingUITests */,
@@ -696,6 +703,7 @@
 			children = (
 				041124D51C9D43D4001B7DD2 /* CYAppDelegate.h */,
 				041124D61C9D43D4001B7DD2 /* CYAppDelegate.m */,
+				BF85A70E1CCDF5CE00A2CCAD /* PushConfig.plist */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1135,6 +1143,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF85A70A1CCDF5B100A2CCAD /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				BF85A70B1CCDF5B100A2CCAD /* jpush-ios-2.1.0.a */,
+				BF85A70C1CCDF5B100A2CCAD /* JPUSHService.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		C26583C71CA66DB900B76914 /* AlbumView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1546,6 +1563,7 @@
 				0411243D1C9D3FD7001B7DD2 /* Assets.xcassets in Resources */,
 				04EF90E61CA4D4C200DCE9E2 /* alltime.png in Resources */,
 				04EF90F91CA4D4C200DCE9E2 /* SHSweetGameCell.xib in Resources */,
+				BF85A70F1CCDF5CE00A2CCAD /* PushConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1865,9 +1883,13 @@
 				INFOPLIST_FILE = SmallLoving/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yunzhiqiang.lalal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "afad7bbb-3465-4fa0-aeb7-2b03ee7c9739";
+				PROVISIONING_PROFILE = "aa45cb9d-4556-4527-8f77-541e5cfdcdb0";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1883,9 +1905,13 @@
 				INFOPLIST_FILE = SmallLoving/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yunzhiqiang.lalal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "afad7bbb-3465-4fa0-aeb7-2b03ee7c9739";
+				PROVISIONING_PROFILE = "aa45cb9d-4556-4527-8f77-541e5cfdcdb0";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

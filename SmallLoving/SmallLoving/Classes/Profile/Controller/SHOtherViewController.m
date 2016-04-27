@@ -100,11 +100,13 @@
                     return;
                 }
                 weakSelf.otherAccount = [objects objectAtIndex:0];
-                if (weakSelf.otherAccount.otherUserName) {
+                CYAccount *cyAccount = [CYAccountTool account];
+                if (weakSelf.otherAccount.otherUserName || [self.textfield.text isEqualToString:cyAccount.userName]) {
                     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"对方已绑定另一半" preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                         
                     }];
+                    [weakSelf.hud removeFromSuperview];
                     [alertVC addAction:confirm];
                     [self presentViewController:alertVC animated:YES completion:nil];
                     [weakSelf.hud removeFromSuperview];

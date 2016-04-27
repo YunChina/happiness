@@ -18,7 +18,7 @@
 #import "SHUserFactory.h"
 #import <CDChatManager.h>
 #import "SHHTTPManager.h"
-
+#import "JPUSHService.h"
 @interface CYAppDelegate ()
 @property(nonatomic, strong)CYAccount *cyAccount;
 
@@ -29,11 +29,28 @@
  *  程序准备就绪即将运行
  */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+
+    
     [AVOSCloud setApplicationId:@"kpXxKrkTjlgyw3uTWPDKCLLC-gzGzoHsz"
                       clientKey:@"MhUJHBVAPtplMw7rg18JCECh"];
     [CYAccount registerSubclass];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    
+    
+    //我是推送
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"PushConfig" ofType:@"plist"];
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    //可以添加自定义categories
+    [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                      UIUserNotificationTypeSound |
+                                                      UIUserNotificationTypeAlert)
+                                          categories:nil];
+    // Required
+    //如需兼容旧版本的方式，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化和同时使用pushConfig.plist文件声明appKey等配置内容。
+    [JPUSHService setupWithOption:launchOptions appKey:[data objectForKey:@"APP_KEY"] channel:[data objectForKey:@"CHANNEL"] apsForProduction:@"False"];
     
     //重置账户信息
     
@@ -93,7 +110,7 @@
 
     return YES;
 }
-
+//leancloud
 -(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
     return [AVOSCloudSNS handleOpenURL:url];
 }
@@ -109,6 +126,34 @@
 {
     return [AVOSCloudSNS handleOpenURL:url];
 }
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    //取消气泡
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+}
+
+
+//我是推送
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    // Required
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    // Required,For systems with less than or equal to iOS6
+    [JPUSHService handleRemoteNotification:userInfo];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    // IOS 7 Support Required
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
     //3D Touch跳转预留
 }
